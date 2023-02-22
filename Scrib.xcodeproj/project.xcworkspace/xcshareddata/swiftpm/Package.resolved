@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "markdown",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/jaywcjlove/markdown",
+      "state" : {
+        "branch" : "main",
+        "revision" : "35bb5e7b9a6e017c4a7612f815fb43120aa236ef"
+      }
+    }
+  ],
+  "version" : 2
+}

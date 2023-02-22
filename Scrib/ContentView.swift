@@ -6,7 +6,9 @@
 //
 
 import SwiftUI
+import Markdown
 import UniformTypeIdentifiers
+
 struct TextFile: FileDocument{
 
     static var readableContentTypes = [UTType.plainText]
@@ -34,29 +36,28 @@ struct TextFile: FileDocument{
 struct ContentView: View {
     @Binding var document: TextFile
 
-    @State private var selectedTab = 0
-    
-
+    @State private var preview = false
     
     var body: some View {
         HStack {
             
             
-            if selectedTab == 0 {
-            
-                                    TextEditor(text: $document.text).font(.custom("Monaco", size: 14))
-                     
-               
-            } else if selectedTab == 1 {
-                Text("Second View")
+            if preview == false {
+                TextEditor(text: $document.text).font(.custom("Monaco", size: 14))
+            } else if preview == true {
+                Markdown(content: $document.text).markdownStyle(
+                    MarkdownStyle(
+                      padding: 10
+                    )
+                )
             }
         }
         .toolbar {
             
                 Button(action: {
-                    // Action for "Delete" button
+                    preview = !preview
                 }) {
-                    Label("Delete", systemImage: "eye")
+                    Label("Toggle Preview", systemImage: "eye")
                 }
                
             

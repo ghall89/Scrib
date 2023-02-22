@@ -11,6 +11,7 @@
 		D37DA0D529A668430073BC7E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37DA0D429A668430073BC7E /* ContentView.swift */; };
 		D37DA0D729A668450073BC7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D37DA0D629A668450073BC7E /* Assets.xcassets */; };
 		D37DA0DB29A668450073BC7E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D37DA0DA29A668450073BC7E /* Preview Assets.xcassets */; };
+		D3BA21ED29A6900F00398B8C /* Markdown in Frameworks */ = {isa = PBXBuildFile; productRef = D3BA21EC29A6900F00398B8C /* Markdown */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3BA21ED29A6900F00398B8C /* Markdown in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +87,9 @@
 			dependencies = (
 			);
 			name = Scrib;
+			packageProductDependencies = (
+				D3BA21EC29A6900F00398B8C /* Markdown */,
+			);
 			productName = Scrib;
 			productReference = D37DA0CF29A668430073BC7E /* Scrib.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +118,9 @@
 				Base,
 			);
 			mainGroup = D37DA0C629A668430073BC7E;
+			packageReferences = (
+				D3BA21EB29A6900F00398B8C /* XCRemoteSwiftPackageReference "markdown" */,
+			);
 			productRefGroup = D37DA0D029A668430073BC7E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -354,6 +362,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D3BA21EB29A6900F00398B8C /* XCRemoteSwiftPackageReference "markdown" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jaywcjlove/markdown";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D3BA21EC29A6900F00398B8C /* Markdown */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D3BA21EB29A6900F00398B8C /* XCRemoteSwiftPackageReference "markdown" */;
+			productName = Markdown;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D37DA0C729A668430073BC7E /* Project object */;
 }
