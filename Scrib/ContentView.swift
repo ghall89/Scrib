@@ -37,13 +37,16 @@ struct ContentView: View {
     @Binding var document: TextFile
 
     @State private var preview = false
+    @State private var fontSize = 14.0
     
     var body: some View {
         HStack {
             
             
             if preview == false {
-                TextEditor(text: $document.text).font(.custom("Monaco", size: 14))
+              
+              TextEditor(text: $document.text).font(.system(size: fontSize).monospaced())
+                
             } else if preview == true {
                 Markdown(content: $document.text).markdownStyle(
                     MarkdownStyle(
@@ -53,14 +56,24 @@ struct ContentView: View {
             }
         }
         .toolbar {
+          
+            Menu{
+                    Button("Increase Text Size", action: {
+                        fontSize = fontSize + 1
+                    }).keyboardShortcut("+")
+                    Button("Decrease Text Size", action: {
+                        fontSize = fontSize - 1
+                    }).keyboardShortcut("-")
+                
+            } label: {
+                Label("Options", systemImage: "gearshape.fill")
+            }
             
-                Button(action: {
-                    preview = !preview
-                }) {
-                    Label("Toggle Preview", systemImage: "eye")
-                }
-               
-            
+            Button(action: {
+                preview = !preview
+            }) {
+                Label("Toggle Preview", systemImage: "eye")
+            }
         }
     }
     

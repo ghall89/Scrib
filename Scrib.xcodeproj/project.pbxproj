@@ -15,9 +15,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D362ED2229A6A8A1006C2330 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D37DA0CF29A668430073BC7E /* Scrib.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scrib.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D37DA0D229A668430073BC7E /* ScribApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScribApp.swift; sourceTree = "<group>"; };
-		D37DA0D429A668430073BC7E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D37DA0D429A668430073BC7E /* ContentView.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D37DA0D629A668450073BC7E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D37DA0D829A668450073BC7E /* Scrib.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Scrib.entitlements; sourceTree = "<group>"; };
 		D37DA0DA29A668450073BC7E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -54,6 +55,7 @@
 		D37DA0D129A668430073BC7E /* Scrib */ = {
 			isa = PBXGroup;
 			children = (
+				D362ED2229A6A8A1006C2330 /* Info.plist */,
 				D37DA0D229A668430073BC7E /* ScribApp.swift */,
 				D37DA0D429A668430073BC7E /* ContentView.swift */,
 				D37DA0D629A668450073BC7E /* Assets.xcassets */,
@@ -277,6 +279,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Scrib/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -315,6 +318,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Scrib/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
