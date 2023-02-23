@@ -2,7 +2,9 @@
 
 ## About
 
-Scrib (pronounced “scribe”) is an open source text editor with a focus on Markdown, written in Swift and SwiftUI. Binaries are released for macOS, but the project will also build to iOS, and iPadOS.
+Scrib (pronounced “scribe”) is an open source text editor for macOS with a focus on writing in Markdown. Built using Swift and SwiftUI.
+
+Srib is in early development, and as such has a very limited feature set, and may have issues.
 
 ## Acknowledgments
 

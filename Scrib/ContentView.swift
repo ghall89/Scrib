@@ -45,7 +45,7 @@ struct ContentView: View {
             
             if preview == false {
               
-              TextEditor(text: $document.text).font(.system(size: fontSize).monospaced())
+              TextEditor(text: $document.text).font(.system(size: fontSize).monospaced()).disableAutocorrection(false)
                 
             } else if preview == true {
                 Markdown(content: $document.text).markdownStyle(
@@ -57,17 +57,19 @@ struct ContentView: View {
         }
         .toolbar {
           
-            Menu{
-                    Button("Increase Text Size", action: {
-                        fontSize = fontSize + 1
-                    }).keyboardShortcut("+")
-                    Button("Decrease Text Size", action: {
-                        fontSize = fontSize - 1
-                    }).keyboardShortcut("-")
-                
-            } label: {
-                Label("Options", systemImage: "gearshape.fill")
+          Menu {
+            ForEach(10..<30, id: \.self) { size in
+              Button(action: {
+                fontSize = CGFloat(size)
+              }) {
+                Text("\(size)")
+                  .font(.system(size: CGFloat(size)))
+              }
             }
+          } label: {
+            Label("Font Size", systemImage: "textformat.size")
+          }
+          
             
             Button(action: {
                 preview = !preview
